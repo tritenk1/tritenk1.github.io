@@ -17,7 +17,6 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
     />
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
       :root {
         --cblack: #333333;
@@ -26,8 +25,8 @@
         --cgreen: #00c8c8;
         --cwhite: #ffffff;
         --cdark-white: #f8f8f8;
---clight-grey: #eeeeee;
---clight-white: #f8f8f8;
+        --clight-grey: #eeeeee;
+        --clight-white: #f8f8f8;
         --fm: "Montserrat";
         --fr: "Roboto";
       }
@@ -35,21 +34,13 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        /* font-size: 13px; */
         font-family: var(--fm);
       }
       .container-fluid {
         width: 100%;
         background-color: var(--cblack);
       }
-      .container--s {
-        max-width: 1170px;
-        margin: auto;
-      }
-      .container--m {
-        max-width: 1770px;
-        margin: auto;
-      }
+      
       ul {
         list-style-type: none;
       }
@@ -59,20 +50,13 @@
         color: var(--cblack);
         font-size: inherit;
       }
-      hr{
-        color: var(--clight-grey);
-      }
+
       /* START header <<<<< */
       .header__top {
         height: 45px;
         background-color: var(--cblack);
         display: flex;
         justify-content: flex-end;
-      }
-      .header__top--item {
-        color: var(--cgrey);
-        font-size: 13px;
-        font-family: var(--fm);
       }
       .header__top--item:first-child {
         margin-right: auto;
@@ -84,8 +68,8 @@
         display: block;
         height: 100%;
         color: var(--cgrey);
-        font-size: 13px;
         font-family: var(--fm);
+        font-size: 13px;
         padding: 15px;
       }
       .header__top--item:hover,
@@ -106,7 +90,6 @@
         z-index: 2;
       }
       .header__top--language > ul li a {
-        /* min-width: 50px; */
         min-width: 70px;
         padding: 0 1px;
         display: block;
@@ -120,7 +103,6 @@
       .header__content {
         position: relative;
         background-color: var(--cdark-white);
-        width: 100%;
         height: 920px;
         margin-bottom: 62px;
         background-image: url("images/1.jpg");
@@ -213,8 +195,6 @@
       }
       .header__button {
         position: absolute;
-        /* bottom: 122px;
-        right: 250px; */
       }
       .header__button a {
         font-size: 16px;
@@ -272,7 +252,6 @@
       }
       .header__submenu--banner span {
         color: var(--cwhite);
-        flex-wrap: wrap;
         font-weight: normal;
         font-size: 36px;
         text-align: center;
@@ -305,12 +284,10 @@
       .content__product {
         width: 100%;
         display: flex;
-        /* flex-wrap: wrap; */
         justify-content: space-between;
       }
       .content__product--sub2 {
         display: flex;
-        /* flex-wrap: wrap; */
         align-items: center;
         justify-content: space-between;
       }
@@ -389,17 +366,10 @@
       ul.feature-icon li:hover a {
         background-color: var(--cgreen);
       }
-      /* @media screen and (max-width: 857px) {
-        .content__product--sub2 {
-          justify-content: center;
-        }
-      } */
-
       /* END content >>>>>>> */
 
        /* START lookbook >>>>> */
     .lookbook {
-      width: 100%;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -456,9 +426,7 @@
     /* START footer <<<<<< */
     .footer {
       width: 100%;
-      height: 631px;
-     
-      
+      height: 631px;      
     }
     .footer__top {background-color: var(--clight-white); padding-top: 62px;}
     .footer__list {
@@ -528,11 +496,43 @@
     }
     /* END footer >>>> */
       @media screen and (max-width: 575px) {
-        .container {
-          width: 100%;
-          margin: auto;
-        }
+        .container--s {
+        width: 100%;
+        margin: auto;
+      }
+      .container--m {
+        width: 100%;
+        margin: auto;
+      }
+      .header__top--item:last-child {
+        margin-left: 5px;
+      }
+      .header__top--item a {
+        font-size: 12px;
+        padding: 10px;
+      }
         .header__name{display: none;}
+        .header__menu > ul > li > a {
+
+        padding: 10px 10px 10px 0;
+        font-size: 12px;
+        font-weight: bold;
+        margin-right: 15px;
+      }
+      .header__submenu {
+        width: 570%;
+        padding: 20px 10px;
+        height: 500px;
+      }
+      .header__submenu--item {
+        flex: 1;
+        margin-bottom: 15px;
+      }
+      .header__submenu--banner span {
+
+        font-size: 30px;
+
+      }
         .header__content {height: 500px;} 
         .header__menu {flex-wrap: wrap;justify-content: center;} 
 
@@ -543,11 +543,12 @@
         margin-bottom: 20px;
 
         justify-content: center;
+        flex-wrap: wrap;
       }
       .content__select li a {
-        
+        font-weight:600;
         font-size: 12px;
-        margin-right: 20px;
+        margin-right: 15px;
 
       }
       .content__product {
@@ -559,12 +560,33 @@
           justify-content: center;
           flex-wrap: wrap;
         }
-        
+        .lookbook__content--header {
+      font-size: 30px;
+    } 
+    .footer__banner {
+      
+      grid-gap: 10px
+      
+    }
+    .footer__banner--item {
+      
+      font-size: 20px;
+    
+    }
       }
       @media screen and (min-width: 576px) and (max-width: 767px) {
-        .container {
-          width: 570px;margin: auto;
-        }
+        .container--s {
+        width: 95%;
+        margin: auto;
+      }
+      .container--m {
+        width: 100%;
+        margin: auto;
+      }
+      .header__top--item a {
+        font-size: 13px;
+        padding: 12px;
+      }
         .header__name{display: none;}.header__content {height: 600px;} .header__menu {flex-wrap: wrap;justify-content: center;} .header__logo{margin-right: 0;}.header__button {bottom:10%;left: 50%;transform: translateX(-50%);}
         .header__search{margin: 0;}
         .content__select {
@@ -585,13 +607,20 @@
      }
       .content__product--sub2 {
           justify-content: center;
-          /* flex-wrap: wrap; */
         }
       }
       @media screen and (min-width: 768px) and (max-width: 991px) {
         .container {
           width: 760px;margin: auto;
         }
+        .container--s {
+        width: 100%;
+        margin: auto;
+      }
+      .container--m {
+        width: 100%;
+        margin: auto;
+      }
         .header__name span {font-size: 350px;}
         .header__content {height: 800px;}
         .header__menu {flex-wrap: wrap;justify-content: center;} 
@@ -600,38 +629,55 @@
           justify-content: center;
       }
         .content__product {
-       
-       
-        flex-wrap: wrap;
-       
+        flex-wrap: wrap;     
+      }
+      .lookbook__content--header {
+      font-size: 35px;
+    }
+      }
+      @media screen and (min-width: 992px) and (max-width: 1023px) {
+        .container--s {
+        width: 100%;
+        margin: auto;
+      }
+      .container--m {
+        width: 100%;
+        margin: auto;
+      }
+        .header__button {     
+        bottom: 122px;
+        right: 250px;
       }
       }
-      @media screen and (min-width: 992px) and (max-width: 1199px) {
+      @media screen and (min-width: 1024px) and (max-width: 1365px) {
         .container {
-          width: 980px;margin: auto;
+          width: 1020px;margin: auto;
         }
+
+        .container--s {
+        width: 980px;
+        margin: auto;
+      }
+      .container--m {
+        width: 100%;
+        margin: auto;
+      }
         .header__button {
        
         bottom: 122px;
         right: 250px;
       }
       }
-      @media screen and (min-width: 1200px) and (max-width: 1399px) {
-        .container {
-          width: 1180px;margin: auto;
-        }
-        .header__button {
-       
-        bottom: 122px;
-        right: 250px;
+      @media screen and (min-width: 1366px){
+        .container--s {
+        max-width: 1400px;
+        margin: auto;
       }
+      .container--m {
+        max-width: 1600px;
+        margin: auto;
       }
-      @media screen and (min-width: 1400px){
-        .container {
-          width: 1600px;margin: auto;
-        }
-        .header__button {
-       
+        .header__button {      
         bottom: 122px;
         right: 250px;
       }
@@ -639,11 +685,10 @@
     </style>
   </head>
   <body>
-    <!-- <div class="container"> -->
     <!-- START header <<<<<<<<<<< -->
     <div class="header">
       <div class="container-fluid">
-        <ul class="container--s header__top">
+        <ul class="header__top container--s">
           <li class="header__top--item">
             <a
               ><span>Currency : GBP </span
@@ -668,8 +713,7 @@
           </li>
         </ul>
       </div>
-      <div class="header__content">
-        <div class="container--m">
+      <div class="header__content container--m">
           <div class="header__name">
             <span>A</span>
             <span>V</span>
@@ -701,7 +745,7 @@
                     </ul>
                   </div>
                   <div class="header__submenu--banner">
-                    <span><b>AUTUMN SALE!</b> UP TO 50% OFF</span>
+                    <span><b>AUTUMN SALE!</b><br> UP TO 50% OFF</span>
                   </div>
                 </div>
               </li>
@@ -722,7 +766,6 @@
             <a href="">SHOP MEN'S COLLECTION</a>
           </div>
         </div>
-      </div>
     </div>
     <!-- END header >>>>>>>>-->
 
@@ -922,7 +965,7 @@
 <!-- END content >>>>>>>>> -->
 
 <!-- START lookbook <<<<<< -->
-<div class="lookbook">
+<div class="lookbook container--m">
   <div class="lookbook__item">
     <div class="lookbook__content">
       <h2 class="lookbook__content--header">MEN'S <br><span>LOOKBOOK</span></h2>
@@ -1037,7 +1080,7 @@
     </div>
     <div class="footer__banner">
       <div class="footer__banner--item award">
-        <b>AWARD WINNER</b> FASHION AWARDS 2016
+        <b>AWARD WINNER</b><br> FASHION AWARDS 2016
       </div>
       <div class="footer__banner--item social">
         <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -1059,6 +1102,5 @@
 </div>
 
 <!-- END footer >>>>>>>> -->
-<!-- </div> -->
   </body>
 </html>
