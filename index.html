@@ -383,9 +383,7 @@
       margin-bottom: 124px;
     }
     .lookbook__item {
-      flex: 1;
       padding: 33px;
-      max-width: 663px;
       height: 530px;
       background-repeat: no-repeat;
       background-position: 10% 5%;
@@ -689,8 +687,15 @@ align-content: center;
         .content__product {
         flex-wrap: wrap;     
       }
+      .content__product--sub1{
+        width: 100%;
+      }
+      .content__product--sub2 .content__item{
+        width: calc(50% - 10px);
+      }
       .lookbook__item {   
-        padding: 30px 25px;        
+        padding: 30px 25px;  
+        width: calc(33.33% - 13.33px);      
     }
       .lookbook__content {
       max-width: 75%;
@@ -722,6 +727,12 @@ align-content: center;
         bottom: 122px;
         right: 250px;
       }
+      .content__product--sub1{
+        width: calc(50%-10px);
+      }
+      .content__product--sub2 .content__item{
+        width: calc(50%-10px);
+      }
       .lookbook__content {
       max-width: 75%;
     }
@@ -730,6 +741,10 @@ align-content: center;
     }
     .lookbook {
       margin-bottom: 60px;
+    }
+    .lookbook__item {   
+        
+      width: calc(33.33% - 13.33px);       
     }
     .footer__top {
     padding-bottom: 40px;}
@@ -752,6 +767,16 @@ align-content: center;
         bottom: 122px;
         right: 250px;
       }
+      .content__product--sub1{
+        width: calc(50%-10px);
+      }
+      .content__product--sub2 .content__item{
+        width: calc(50%-10px);
+      }
+      .lookbook__item {   
+        
+        width: calc(33.33% - 13.33px);         
+    }
       .lookbook__content {
       max-width: 75%;
     }
@@ -772,6 +797,16 @@ align-content: center;
         bottom: 122px;
         right: 250px;
       }
+      .content__product--sub1{
+        width: calc(50%-10px);
+      }
+      .content__product--sub2 .content__item{
+        width: calc(50%-10px);
+      }
+      .lookbook__item {   
+        
+        width: calc(33.33% - 13.33px);          
+    }
       .lookbook__content--header {
       font-size: 40px;
     }
@@ -789,7 +824,16 @@ align-content: center;
         bottom: 122px;
         right: 250px;
       }
-      
+      .content__product--sub1{
+        width: calc(50% - 10px);
+      }
+      .content__product--sub2 .content__item{
+        width: calc(50% - 10px);
+      }
+      .lookbook__item {   
+        
+        width: calc(33.33% - 13.33px);      
+    }
       }
     </style>
   </head>
